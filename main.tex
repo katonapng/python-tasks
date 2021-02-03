@@ -1,0 +1,153 @@
+\documentclass[a4paper]{article}
+\usepackage[12pt]{extsizes} % для того чтобы задать нестандартный 12-ый размер шрифта
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{setspace,amsmath}
+\usepackage[argument]{graphicx}
+\usepackage{hyperref}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\usepackage[left=25mm, top=20mm, right=25mm, bottom=20mm, nohead, footskip=10mm]{geometry} % настройки полей документа
+ 
+\begin{document} % начало документа
+ \textbf{Задача 1}\\
+ 
+ \textbf{Постановка}
+ 
+ Назовём строку хорошей, если в ней содержаться только буквы 'd', 'g', 'o' и предыдущая буква не совпадает со следующей.\\
+ 
+ Примеры хороших строк: 'dog', 'god', 'dogdog'\\
+ 
+ Примеры плохих строк: 'good', 'ooo', 'doc'\\
+ 
+ Даны целые числа n и k. Пусть есть список всех хороших строк длины n. Будем считать, что строки отсортированы в лексикографическом порядке. \\
+ 
+ Необходимо вернуть k-ую строку этого списка. Если в списке менее k хороших строк, то вернуть None.\\
+ 
+ \textbf{Входные данные}
+ 
+ В строке находятся целые числа n и k.\\
+ 
+  \textbf{Выходные данные}
+  
+ Хорошая строка под номером k.\\
+ 
+  \textbf{Пример 1}\\
+  \begin{table}[!h]
+  \centering
+  \begin{tabular}{ | l | l | }
+\hline
+Входные данные & Выходные данные \\ \hline
+1 3 & 'о'  \\
+\hline
+\end{tabular}\\
+\end{table}
+
+
+\textbf{Пример 2}\\
+\begin{table}[!h]
+  \centering
+  \begin{tabular}{ | l | l | }
+\hline
+Входные данные & Выходные данные \\ \hline
+3 4 & 'dog'  \\
+\hline
+\end{tabular}\\
+\end{table}
+
+\textbf{Пример 3}
+\begin{table}[!h]
+  \centering
+  \begin{tabular}{ | l | l | }
+\hline
+Входные данные & Выходные данные \\ \hline
+1 4 & None  \\
+\hline
+\end{tabular}
+  \end{table}
+
+\newpage
+\textbf{Задача 2}\\
+ 
+ \textbf{Постановка}
+ 
+ Пусть дана строка. Необходимо переставить в ней буквы так, чтобы одинаковые буквы не стояли рядом. Перестановку нужно сделать в лексикографическом порядке. Если это невозможно, то верните None.\\
+ 
+ \textbf{Входные данные}
+ 
+ Строка.\\
+ 
+  \textbf{Выходные данные}
+  
+\begin{itemize}
+    \item если перестановка существует, то измененная строка.
+    \item если не существует, то None.
+\end{itemize}
+ 
+  \textbf{Пример 1}\\
+  \begin{table}[!h]
+  \centering
+  \begin{tabular}{ | l | l | }
+\hline
+Входные данные & Выходные данные \\ \hline
+'abbc' & 'abcb'  \\
+\hline
+\end{tabular}\\
+\end{table}
+
+
+\textbf{Пример 2}\\
+\begin{table}[!h]
+  \centering
+  \begin{tabular}{ | l | l | }
+\hline
+Входные данные & Выходные данные \\ \hline
+'bbbc' & None  \\
+\hline
+\end{tabular}\\
+\end{table}
+
+\newpage
+\textbf{Задача 3}\\
+ 
+ \textbf{Постановка}
+ 
+Некоторая строка закодирована шифром. Чтобы расшифровать эту строку, существует некоторая машина, которая читает один символ за раз и выполняет следующие действия:
+\begin{itemize}
+    \item если прочитанный символ это буква, то она записывается на ленту
+    \item если прочитанный символ это цифра n, то вся записанная строка печатается ещё n-1 раз.
+\end{itemize}
+
+Для некоторой зашифрованной строки необходимо вывести k-ую буквы расшифрованной строки.\\
+ 
+ \textbf{Входные данные}
+ 
+ Строка и целое число k.\\
+ 
+  \textbf{Выходные данные}
+  
+k-ая буква расшифрованной строки.\\
+ 
+  \textbf{Пример 1}\\
+  \begin{table}[!h]
+  \centering
+  \begin{tabular}{ | l | l | }
+\hline
+Входные данные & Выходные данные \\ \hline
+'cute2dog3' \quad 10 & 'o'  \\
+\hline
+\end{tabular}\\
+\end{table}
+
+
+\textbf{Пример 2}\\
+\begin{table}[!h]
+  \centering
+  \begin{tabular}{ | l | l | }
+\hline
+Входные данные & Выходные данные \\ \hline
+'no23' \quad 5 & 'n'  \\
+\hline
+\end{tabular}\\
+\end{table}
+ 
+\end{document}
